@@ -43,5 +43,9 @@ while game_is_on:
         scoreboard.update_r_score()
         ball.reset_position()
 
+    # Check if any score is over 4
+    if scoreboard.l_score > 4 or scoreboard.r_score > 4:
+        game_is_on = False
+
 
 screen.exitonclick()
